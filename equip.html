@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nostra cuina i equip — Arrels del Foc</title>
+<meta name="description" content="Arrels del Foc, Martinet. La nostra cuina i l'equip darrere el restaurant.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ BARRA SUPERIOR (idiomes) ============ -->
+<div class="lang-bar">
+  <div class="container lang-bar-inner">
+    <div class="lang-switch" id="lang-switch" role="group" aria-label="Idioma">
+      <button data-lang="ca" class="is-active">CA</button>
+      <button data-lang="es">ES</button>
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <a href="tel:+34633868610" class="lang-bar-phone">633 86 86 10</a>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html#inici" class="brand">
+      <img src="assets/logo/icon.png" alt="Arrels del Foc" class="logo-img logo-icon">
+      <span class="brand-fallback">
+        <b>ARRELS DEL FOC</b>
+        <span>CUINA · FOC · PIRINEU</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#inici" data-i18n="nav.inici">Inici</a>
+      <a href="equip.html" data-i18n="nav.cuina">La cuina</a>
+      <a href="carta.html" data-i18n="nav.carta">Carta</a>
+      <a href="index.html#experiencia" data-i18n="nav.experiencia">Experiència</a>
+      <a href="index.html#contacte" data-i18n="nav.contacte">Contacte</a>
+    </nav>
+    <div class="header-actions">
+      <a href="reserves.html" class="btn btn-primary" data-i18n="nav.reservar">Reservar taula</a>
+      <button class="burger" aria-label="Obrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <a href="index.html#inici" data-i18n="nav.inici">Inici</a>
+  <a href="equip.html" data-i18n="nav.cuina">La cuina</a>
+  <a href="carta.html" data-i18n="nav.carta">Carta</a>
+  <a href="index.html#experiencia" data-i18n="nav.experiencia">Experiència</a>
+  <a href="index.html#contacte" data-i18n="nav.contacte">Contacte</a>
+  <a href="reserves.html" class="btn btn-primary" data-i18n="nav.reservar">Reservar taula</a>
+</div>
+
+<!-- ============ NUESTRA COCINA ============ -->
+<section class="cuina carta--page" id="cuina">
+  <div class="container">
+    <div class="cuina-text reveal">
+      <span class="eyebrow" data-i18n="cuina.eyebrow">Nuestra cocina</span>
+      <h2 data-i18n="cuina.title">Argentina i Catalunya,<br>al voltant del foc.</h2>
+      <p class="lede" data-i18n="cuina.p1">Arrels del Foc neix de la trobada entre les nostres arrels argentines i el lloc que avui anomenem casa: el Pirineu català.</p>
+      <p class="lede" data-i18n="cuina.p2">La nostra cuina uneix la tradició argentina de la graella amb productes i sabors de la cuina catalana. Treballem amb producte de qualitat, respectant cada ingredient i deixant que el foc faci la resta.</p>
+      <p class="lede" data-i18n="cuina.p3">Aquí cuinem de veritat: empanades, canelons, salses, guarnicions, postres i moltes de les elaboracions que arriben a taula neixen a la nostra pròpia cuina. Cuinem des de zero, cuidant cada procés i cada producte.</p>
+      <div class="cuina-stats">
+        <div>
+          <svg class="stat-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor"><path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1.194-3-2.899 0-.708.216-1.373.6-1.928.404.29.929.44 1.4.427-.371-1.293.2-3.06 1.788-3.6-.164.994-.202 2.113.594 2.994.804.89 1.618 1.848 1.618 3.106C10.999 14.006 9.5 15 8 15Z"/></svg>
+          <b data-i18n="cuina.stat1.title">Brasa de carbó</b><span data-i18n="cuina.stat1.desc">El foc com a part de la nostra identitat.</span>
+        </div>
+        <div>
+          <svg class="stat-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h16v3a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-3Z"/><path d="M2 10h20M8 10V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3"/></svg>
+          <b data-i18n="cuina.stat2.title">Elaboració pròpia</b><span data-i18n="cuina.stat2.desc">Fet a la nostra cuina, des de zero.</span>
+        </div>
+        <div>
+          <svg class="stat-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19c7-1 12-6 13-13-7 1-12 6-13 13Z"/><path d="M6 18c2-4 5-7 9-9"/></svg>
+          <b data-i18n="cuina.stat3.title">Producte de qualitat</b><span data-i18n="cuina.stat3.desc">Triat pel que aporta al plat.</span>
+        </div>
+      </div>
+    </div>
+    <div class="cuina-media photo reveal" data-src="assets/img/exp-5.jpg" data-label="El restaurant"></div>
+  </div>
+</section>
+
+<!-- ============ EQUIP ============ -->
+<section class="equip" id="equip">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" data-i18n="team.eyebrow">Qui som</span>
+      <h2 data-i18n="team.title">Darrere Arrels hi som nosaltres.</h2>
+      <p class="lede" data-i18n="team.intro">Arrels del Foc va néixer de tres persones, de les nostres arrels, de la nostra experiència i de les ganes de construir un restaurant propi al Pirineu. Avui seguim darrere de cada servei: creant els plats, encenent el foc i rebent cada taula.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo photo" data-src="assets/img/team-bruno.jpg" data-label="Bruno Poggi"></div>
+        <h3>Bruno Poggi</h3>
+        <span class="team-role" data-i18n="team.bruno.role">Chef executiu · Cuina i creació</span>
+        <p data-i18n="team.bruno.bio">Bruno està darrere la proposta gastronòmica d'Arrels. És qui desenvolupa les receptes i construeix la trobada entre la cuina argentina i catalana, buscant que cada plat tingui identitat, equilibri i sentit dins la nostra cuina.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo photo" data-src="assets/img/team-valeria.jpg" data-label="Valeria Iribarne"></div>
+        <h3>Valeria Iribarne</h3>
+        <span class="team-role" data-i18n="team.valeria.role">Sala · Hospitalitat i experiència</span>
+        <p data-i18n="team.valeria.bio">Valeria està al capdavant de la sala i de l'experiència del client. És qui rep, acompanya i cuida cada taula, fent que l'experiència Arrels vagi molt més enllà del que passa al plat.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo photo" data-src="assets/img/team-rodrigo.jpg" data-label="Rodrigo Rios"></div>
+        <h3>Rodrigo Rios</h3>
+        <span class="team-role" data-i18n="team.rodrigo.role">Graella · Foc i gestió</span>
+        <p data-i18n="team.rodrigo.bio">Rodrigo està especialment vinculat al foc. La seva experiència a la graella i la cuina a la brasa converteix el carbó, les temperatures i els punts de cocció en una part essencial de la identitat d'Arrels. A més, participa en la gestió i el desenvolupament del projecte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRE-FOOTER CTA ============ -->
+<section class="pre-footer-cta">
+  <div class="container">
+    <p data-i18n="preFooter.text">A punt per venir?</p>
+    <a href="reserves.html" class="btn btn-primary" data-i18n="nav.reservar">Reservar taula</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-col--brand">
+      <a href="index.html#inici" class="brand footer-logo">
+        <img src="assets/logo/logo-full.png" alt="Arrels del Foc" class="logo-img">
+      </a>
+      <span class="footer-mini" data-i18n="footer.mini">ARGENTINA · PIRINEU · FOC</span>
+      <p class="footer-tagline" data-i18n="footer.tagline">Cuina de producte i foc al cor del Pirineu català.</p>
+    </div>
+
+    <div class="footer-col footer-col--nav">
+      <h4 data-i18n="footer.discover">Descobreix Arrels</h4>
+      <a href="equip.html" data-i18n="nav.cuina">La cuina</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+      <a href="carta.html" data-i18n="footer.offMenu">Fora de carta</a>
+      <a href="equip.html" data-i18n="footer.history">La nostra història</a>
+      <a href="index.html#opinions" data-i18n="opinions.eyebrow">Opinions</a>
+    </div>
+
+    <div class="footer-col footer-col--contact">
+      <h4 data-i18n="footer.contactTitle">Vine a veure'ns</h4>
+      <div class="footer-contact-item">
+        <svg class="footer-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <span>Carrer del Segre, 13D<br>Martinet · Cerdanya</span>
+      </div>
+      <a href="tel:+34633868610" class="footer-contact-item">
+        <svg class="footer-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8Z"/></svg>
+        <span>633 86 86 10</span>
+      </a>
+      <a href="mailto:arrelsdelfoc@gmail.com" class="footer-contact-item">
+        <svg class="footer-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+        <span>arrelsdelfoc@gmail.com</span>
+      </a>
+      <div class="footer-social-row">
+        <a href="https://www.instagram.com/arrelsdelfoc" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          <span class="social-label">Instagram</span>
+        </a>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g2562181-d34087077-Reviews-Arrels_del_foc-Martinet_Province_of_Lleida_Catalonia.html" target="_blank" rel="noopener" aria-label="Tripadvisor">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7.5" cy="13" r="4"/><circle cx="16.5" cy="13" r="4"/><circle cx="7.5" cy="13" r="1.2" fill="currentColor" stroke="none"/><circle cx="16.5" cy="13" r="1.2" fill="currentColor" stroke="none"/><path d="M9.5 8.5c1-1 3.5-1 4.5 0M4 9l3-1.2M20 9l-3-1.2"/></svg>
+          <span class="social-label">Tripadvisor</span>
+        </a>
+        <a href="https://www.google.com/maps/place/Arrels+del+Foc/@42.3596381,1.6946771,17z/data=!4m6!3m5!1s0x12a59bad6a8d55bb:0x4e73a71548880e29!8m2!3d42.3596381!4d1.6946771!16s%2Fg%2F11yl_wq6m_" target="_blank" rel="noopener" aria-label="Google">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M21.35 11.1h-9.17v2.98h5.24c-.23 1.36-1.6 4-5.24 4-3.15 0-5.72-2.6-5.72-5.8s2.57-5.8 5.72-5.8c1.79 0 3 .76 3.68 1.42l2.5-2.4C16.9 3.98 14.75 3 12.18 3 6.99 3 2.8 7.2 2.8 12.4s4.19 9.4 9.38 9.4c5.42 0 9-3.8 9-9.16 0-.62-.07-1.1-.16-1.54z"/></svg>
+          <span class="social-label">Google</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="year"></span> Arrels del Foc</span>
+    <span>Martinet · Cerdanya · Pirineu</span>
+  </div>
+</footer>
+
+<a href="reserves.html" class="mobile-reserve" data-i18n="nav.reservar">Reservar taula</a>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+ARRELS DEL FOC — Web
+=====================
+
+Cómo verla
+----------
+Abre "index.html" haciendo doble clic (funciona sin servidor ni instalar nada).
+
+Qué es ya 100% real
+---------------------
+- Vídeo de fuego del hero (portada): el vídeo real que enviaste (assets/video/hero-foc.mp4).
+- 9 fotos de platos reales, ya puestas en la carta: Calamar a la Brasa, Formatge a la Planxa,
+  Galtes d'Arrels, Bacallà, Lasanya Camperola, Amanida Cèsar, Hamburguesa Gaucha,
+  Temptació de Xocolata, Arròs Cremós del Foc.
+  OJO: la foto del corte de carne la he puesto en "Chuletón Madurat" — confírmame si es ese
+  corte o si en realidad es el Vacío / la Entranya, y lo cambio.
+- Galería "Experiència Arrels": façana real con el cartel "ARRELS DEL FOC", terraza (2 fotos),
+  el rincón de la barra, el detalle de la escultura de madera, y 2 platos más (el pescado con
+  higos y el bol con huevo y patatas — preciosos pero no sabía a qué plato de la carta
+  corresponden exactamente, dímelo si quieres que los use como fichas de carta también).
+- Dirección, teléfono, Instagram y Tripadvisor: reales y verificados.
+- Idiomas: la web ya tiene selector arriba del todo (CA / ES / FR / EN). Catalán es el idioma
+  por defecto. Los nombres de los platos se mantienen igual en los 4 idiomas (como en cualquier
+  carta), solo cambian los textos y las categorías.
+- Opiniones: 2 reseñas reales de Tripadvisor (son las únicas con texto público que encontré:
+  Google no deja leer el contenido de las 198 reseñas sin iniciar sesión). Si me pasas 2-3
+  reseñas más copiadas de Google, las añado en un momento — están en script.js, array REVIEWS.
+
+Qué falta todavía
+--------------------
+1. Logo oficial: hoy se ve el texto "ARRELS DEL FOC" de respaldo. Guarda el logo en PNG con
+   fondo transparente como assets/logo/logo.png (header) y assets/logo/logo-light.png (footer)
+   y aparece solo, sin tocar código.
+2. Fotos que faltan en la carta: Canelons de Galtes, Empanada Argentina, Empanada Caprese,
+   Escalivada Arrels, Salteat d'Arrels, Albergínia Rostida, Vacío Angus, Entranya Criolla,
+   Milanesa del Foc, Tarta Silvestre, Flam Casolà. Cuando tengas foto de alguno, guárdala en
+   assets/img/ y dime el nombre del archivo para enlazarla (o dime el nombre exacto que quieres
+   usar, p.ej. dish-vacio.jpg, y la enlazo directamente en script.js, array CARTA).
+3. Precios: no me has pasado ninguno todavía — la carta se ve bien sin ellos, pero en cuanto
+   los tengas los añado (un campo "preu" por plato en script.js).
+4. Horario mostrado (jueves a domingo, 20:00-23:00, cerrado lunes-martes-miércoles): puesto
+   de forma orientativa según lo que aparece en Google — confírmamelo.
+5. QR para las mesas: me pediste un QR físico para poner en las mesas y que lleve a la carta
+   online — lo hago en cuanto tengamos el dominio definitivo donde publiquéis la web (si el QR
+   apunta a la carpeta local de tu ordenador no serviría de nada una vez impreso). En cuanto
+   me digas dónde se publica, te genero el PNG del QR listo para imprimir.
+
+Reservas
+--------
+El botón "Reservar taula" llama por teléfono o abre WhatsApp con un mensaje ya escrito
+(al número 633 86 86 10). No hay sistema de reservas online conectado — si en el futuro
+quieres uno (TheFork, Covermanager, etc.) puedo integrarlo.
+
+Publicar la web en internet (cuando esté lista)
+-------------------------------------------------
+Esta es una web estática (HTML/CSS/JS), así que se puede publicar gratis y en minutos en
+sitios como Netlify o GitHub Pages, o subirla al hosting que tengáis para el dominio
+arrelsdelfoc.com (o el que elijáis). Puedo ayudarte con ese paso cuando lo necesites.
