@@ -331,19 +331,18 @@ const VINS = {
 
 /* ---- Horari real (16/08/26): dinar cada dia menys dimecres, sopar nomes dv/ds ---- */
 const HORARI = [
-  { day: { ca: "Diumenge", es: "Domingo", fr: "Dimanche", en: "Sunday" }, hours: "13:00 – 16:00" },
-  { day: { ca: "Dilluns", es: "Lunes", fr: "Lundi", en: "Monday" }, hours: "13:00 – 16:00" },
-  { day: { ca: "Dimarts", es: "Martes", fr: "Mardi", en: "Tuesday" }, hours: "13:00 – 16:00" },
-  { day: { ca: "Dimecres", es: "Miércoles", fr: "Mercredi", en: "Wednesday" }, hours: null },
-  { day: { ca: "Dijous", es: "Jueves", fr: "Jeudi", en: "Thursday" }, hours: "13:00 – 16:00" },
-  { day: { ca: "Divendres", es: "Viernes", fr: "Vendredi", en: "Friday" }, hours: "13:00 – 16:00, 20:00 – 22:00" },
-  { day: { ca: "Dissabte", es: "Sábado", fr: "Samedi", en: "Saturday" }, hours: "13:00 – 16:00, 20:00 – 22:00" },
+  { dow: 1, day: { ca: "Dilluns", es: "Lunes", fr: "Lundi", en: "Monday" }, hours: "13:00 – 16:00" },
+  { dow: 2, day: { ca: "Dimarts", es: "Martes", fr: "Mardi", en: "Tuesday" }, hours: "13:00 – 16:00" },
+  { dow: 3, day: { ca: "Dimecres", es: "Miércoles", fr: "Mercredi", en: "Wednesday" }, hours: null },
+  { dow: 4, day: { ca: "Dijous", es: "Jueves", fr: "Jeudi", en: "Thursday" }, hours: "13:00 – 16:00" },
+  { dow: 5, day: { ca: "Divendres", es: "Viernes", fr: "Vendredi", en: "Friday" }, hours: "13:00 – 16:00, 20:00 – 22:00" },
+  { dow: 6, day: { ca: "Dissabte", es: "Sábado", fr: "Samedi", en: "Saturday" }, hours: "13:00 – 16:00, 20:00 – 22:00" },
+  { dow: 0, day: { ca: "Diumenge", es: "Domingo", fr: "Dimanche", en: "Sunday" }, hours: "13:00 – 16:00" },
 ];
 
 function horariHtml(dict) {
-  const todayIdx = new Date().getDay();
-  return HORARI.map((d, i) => `
-    <div class="horari-row${i === todayIdx ? " is-today" : ""}">
+  return HORARI.map((d) => `
+    <div class="horari-row">
       <span class="horari-day">${d.day[currentLang] || d.day.es}</span>
       <span class="horari-hours">${d.hours || dict["reserves.tancatLabel"]}</span>
     </div>

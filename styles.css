@@ -390,7 +390,6 @@ section{ position: relative; }
 /* ---- Horari (taula dia a dia, reutilitzada a reserves.html i al home) ---- */
 .horari-table{ max-width: 320px; margin: 0 auto; }
 .horari-row{ display:flex; justify-content:space-between; gap:16px; padding: 5px 0; font-size:.85rem; opacity:.68; }
-.horari-row.is-today{ opacity:1; font-weight:600; }
 .horari-hours{ text-align:right; white-space:nowrap; }
 .reserves-horari{ margin-top: 8px; }
 .contacte-horari{ margin-bottom: 24px; }
