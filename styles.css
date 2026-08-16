@@ -516,6 +516,7 @@ a.footer-contact-item:hover{ color: var(--crema); }
   .footer-social-row{ justify-content:center; margin-top: 10px; }
   .footer-social-row .social-label{ display:none; }
   .footer-social-row a{ width:36px; height:36px; border-radius:50%; border:1px solid rgba(245,237,227,.25); justify-content:center; }
+  .footer-social-row a:not(:last-child)::after{ content:none; }
   .footer-bottom{ justify-content:center; text-align:center; gap:4px 16px; padding-top: 16px; }
 }
 @media (max-width: 560px){
