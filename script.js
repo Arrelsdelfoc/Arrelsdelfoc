@@ -67,7 +67,7 @@ const CARTA = {
       },
     },
     {
-      nom: { es: "Salteado d'Arrels", ca: "Saltat d'Arrels", fr: "Sauté d'Arrels", en: "Arrels Sauté" },
+      nom: { es: "Salteado de Arrels", ca: "Saltat d'Arrels", fr: "Sauté d'Arrels", en: "Arrels Sauté" },
       preu: "15 €",
       img: "assets/img/gallery-plat-ou.jpg",
       desc: {
@@ -113,7 +113,7 @@ const CARTA = {
       },
     },
     {
-      nom: { es: "Galtes d'Arrels", ca: "Galtes d'Arrels", fr: "Joues de Bœuf d'Arrels", en: "Galtes d'Arrels (Beef Cheeks)" },
+      nom: { es: "Carrilleras de Arrels", ca: "Galtes d'Arrels", fr: "Joues de Bœuf d'Arrels", en: "Arrels Beef Cheeks" },
       preu: "23 €",
       img: "assets/img/dish-galtes.jpg",
       desc: {
