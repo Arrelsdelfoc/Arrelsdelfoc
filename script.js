@@ -831,21 +831,6 @@ function initPhotoFallbacks() {
   });
 }
 
-/* ---- Video del hero: tria font mobil/desktop i, si falla, es queda el degradat de fons ---- */
-function initHeroVideo() {
-  const video = document.querySelector(".hero-video");
-  if (!video) return;
-  const isMobile = window.matchMedia("(max-width: 700px)").matches;
-  const src = (isMobile && video.dataset.srcMobile) ? video.dataset.srcMobile : video.dataset.srcDesktop;
-  const hide = () => { video.style.display = "none"; };
-  video.addEventListener("error", hide);
-  if (src) {
-    video.src = src;
-    video.load();
-  }
-  video.play().catch(() => {});
-}
-
 /* ---- Logo amb fallback textual ---- */
 function showLogoFallback(img) {
   img.style.display = "none";
@@ -870,7 +855,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileNav();
   initReveal();
   initPhotoFallbacks();
-  initHeroVideo();
   initLogoFallback();
   document.getElementById("year").textContent = new Date().getFullYear();
 });
