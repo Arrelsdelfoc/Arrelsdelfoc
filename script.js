@@ -391,6 +391,7 @@ const I18N = {
     "nav.experiencia": "Experiència", "nav.contacte": "Contacte", "nav.reservar": "Reservar taula",
     "hero.cta1": "Reservar taula", "hero.cta2": "Veure la carta", "hero.scroll": "Descobreix-nos",
     "hero.tagline": "Cuina argentina al Pirineu",
+    "hero.h1": "Arrels del Foc — Restaurant de cuina argentina a Martinet, Cerdanya",
     "brand.pillars": "Arrels · Foc · Pirineu",
     "cuina.eyebrow": "La nostra cuina",
     "cuina.title": "Arrels argentines,<br>cuina pròpia.",
@@ -446,6 +447,7 @@ const I18N = {
     "nav.experiencia": "Experiencia", "nav.contacte": "Contacto", "nav.reservar": "Reservar mesa",
     "hero.cta1": "Reservar mesa", "hero.cta2": "Ver la carta", "hero.scroll": "Descúbrenos",
     "hero.tagline": "Cocina argentina en los Pirineos",
+    "hero.h1": "Arrels del Foc — Restaurante argentino en Martinet, Cerdanya, cerca de Andorra",
     "brand.pillars": "Raíces · Fuego · Pirineo",
     "cuina.eyebrow": "Nuestra cocina",
     "cuina.title": "Raíces argentinas,<br>cocina propia.",
@@ -501,6 +503,7 @@ const I18N = {
     "nav.experiencia": "Expérience", "nav.contacte": "Contact", "nav.reservar": "Réserver une table",
     "hero.cta1": "Réserver une table", "hero.cta2": "Voir le menu", "hero.scroll": "Découvrez-nous",
     "hero.tagline": "Cuisine argentine dans les Pyrénées",
+    "hero.h1": "Arrels del Foc — Restaurant argentin à Martinet, Cerdagne, près d'Andorre",
     "brand.pillars": "Racines · Feu · Pyrénées",
     "cuina.eyebrow": "Notre cuisine",
     "cuina.title": "Racines argentines,<br>cuisine maison.",
@@ -556,6 +559,7 @@ const I18N = {
     "nav.experiencia": "Experience", "nav.contacte": "Contact", "nav.reservar": "Book a table",
     "hero.cta1": "Book a table", "hero.cta2": "See the menu", "hero.scroll": "Discover us",
     "hero.tagline": "Argentine cuisine in the Pyrenees",
+    "hero.h1": "Arrels del Foc — Argentine restaurant in Martinet, Cerdanya, near Andorra",
     "brand.pillars": "Roots · Fire · Pyrenees",
     "cuina.eyebrow": "Our kitchen",
     "cuina.title": "Argentine roots,<br>our own kitchen.",
@@ -651,7 +655,7 @@ function dishGridHtml(key) {
     const descHtml = descText ? `<p class="dish-desc">${descText}</p>` : "";
     const priceHtml = plat.preu ? `<span class="dish-price">${plat.preu}</span>` : "";
     const mediaHtml = plat.img
-      ? `<div class="dish-media"><img src="${plat.img}" alt="${nomText}" loading="lazy"></div>`
+      ? `<div class="dish-media"><img src="${plat.img}" alt="${nomText} — Arrels del Foc, restaurant argentí a Martinet" loading="lazy"></div>`
       : "";
     item.innerHTML = `
       ${mediaHtml}
