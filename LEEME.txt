@@ -1,57 +1,104 @@
 ARRELS DEL FOC — Web
 =====================
+Resumen operativo (actualizado 20/08/2026). Sirve para retomar el proyecto en cualquier
+momento o en otra conversación con Claude.
 
-Cómo verla
-----------
-Abre "index.html" haciendo doble clic (funciona sin servidor ni instalar nada).
 
-Qué es ya 100% real
----------------------
-- Vídeo de fuego del hero (portada): el vídeo real que enviaste (assets/video/hero-foc.mp4).
-- 9 fotos de platos reales, ya puestas en la carta: Calamar a la Brasa, Formatge a la Planxa,
-  Galtes d'Arrels, Bacallà, Lasanya Camperola, Amanida Cèsar, Hamburguesa Gaucha,
-  Temptació de Xocolata, Arròs Cremós del Foc.
-  OJO: la foto del corte de carne la he puesto en "Chuletón Madurat" — confírmame si es ese
-  corte o si en realidad es el Vacío / la Entranya, y lo cambio.
-- Galería "Experiència Arrels": façana real con el cartel "ARRELS DEL FOC", terraza (2 fotos),
-  el rincón de la barra, el detalle de la escultura de madera, y 2 platos más (el pescado con
-  higos y el bol con huevo y patatas — preciosos pero no sabía a qué plato de la carta
-  corresponden exactamente, dímelo si quieres que los use como fichas de carta también).
-- Dirección, teléfono, Instagram y Tripadvisor: reales y verificados.
-- Idiomas: la web ya tiene selector arriba del todo (CA / ES / FR / EN). Catalán es el idioma
-  por defecto. Los nombres de los platos se mantienen igual en los 4 idiomas (como en cualquier
-  carta), solo cambian los textos y las categorías.
-- Opiniones: 2 reseñas reales de Tripadvisor (son las únicas con texto público que encontré:
-  Google no deja leer el contenido de las 198 reseñas sin iniciar sesión). Si me pasas 2-3
-  reseñas más copiadas de Google, las añado en un momento — están en script.js, array REVIEWS.
+1) QUÉ ES ESTO
+----------------
+Web estática (HTML + CSS + JS puro, sin build ni framework) del restaurante Arrels del
+Foc, en Martinet (Cerdanya). 4 páginas:
+  - index.html    Inicio (hero con vídeo, experiencia, equipo-CTA, opiniones, contacto)
+  - carta.html    Carta completa (Entrants/Principals/Postres/Begudes/Vins)
+  - equip.html    Nuestra cocina + equipo (Bruno, Rodrigo, Valeria)
+  - reserves.html Reservar (llamar / WhatsApp)
+Todas comparten styles.css + script.js. 4 idiomas (CA por defecto / ES / FR / EN) con un
+selector arriba a la derecha — el cambio de idioma es 100% JavaScript en la misma URL,
+NO hay rutas separadas por idioma (importante: Google solo indexa la versión catalana,
+la que está en el HTML crudo).
 
-Qué falta todavía
---------------------
-1. Logo oficial: hoy se ve el texto "ARRELS DEL FOC" de respaldo. Guarda el logo en PNG con
-   fondo transparente como assets/logo/logo.png (header) y assets/logo/logo-light.png (footer)
-   y aparece solo, sin tocar código.
-2. Fotos que faltan en la carta: Canelons de Galtes, Empanada Argentina, Empanada Caprese,
-   Escalivada Arrels, Salteat d'Arrels, Albergínia Rostida, Vacío Angus, Entranya Criolla,
-   Milanesa del Foc, Tarta Silvestre, Flam Casolà. Cuando tengas foto de alguno, guárdala en
-   assets/img/ y dime el nombre del archivo para enlazarla (o dime el nombre exacto que quieres
-   usar, p.ej. dish-vacio.jpg, y la enlazo directamente en script.js, array CARTA).
-3. Precios: no me has pasado ninguno todavía — la carta se ve bien sin ellos, pero en cuanto
-   los tengas los añado (un campo "preu" por plato en script.js).
-4. Horario mostrado (jueves a domingo, 20:00-23:00, cerrado lunes-martes-miércoles): puesto
-   de forma orientativa según lo que aparece en Google — confírmamelo.
-5. QR para las mesas: me pediste un QR físico para poner en las mesas y que lleve a la carta
-   online — lo hago en cuanto tengamos el dominio definitivo donde publiquéis la web (si el QR
-   apunta a la carpeta local de tu ordenador no serviría de nada una vez impreso). En cuanto
-   me digas dónde se publica, te genero el PNG del QR listo para imprimir.
 
-Reservas
---------
-El botón "Reservar taula" llama por teléfono o abre WhatsApp con un mensaje ya escrito
-(al número 633 86 86 10). No hay sistema de reservas online conectado — si en el futuro
-quieres uno (TheFork, Covermanager, etc.) puedo integrarlo.
+2) CÓMO SE PUBLICA (flujo de trabajo)
+----------------------------------------
+Carpeta local:  C:\Users\sofia.gimenez\Desktop\Arrels del Foc - Web
+Es un repo git conectado a GitHub, y GitHub conectado a Netlify con auto-deploy.
 
-Publicar la web en internet (cuando esté lista)
--------------------------------------------------
-Esta es una web estática (HTML/CSS/JS), así que se puede publicar gratis y en minutos en
-sitios como Netlify o GitHub Pages, o subirla al hosting que tengáis para el dominio
-arrelsdelfoc.com (o el que elijáis). Puedo ayudarte con ese paso cuando lo necesites.
+Para publicar un cambio:
+  git add -A
+  git commit -m "mensaje"
+  git push
+...y en ~1 minuto el cambio ya está en vivo en arrelsdelfoc.com. No hay que hacer nada
+más (no hay build, no hay que subir carpetas a mano).
+
+Vista previa local sin publicar: doble clic en index.html (o cualquier .html), funciona
+sin servidor. Ojo: los cambios de idioma/JS funcionan igual abriendo el archivo directo.
+
+
+3) CUENTAS Y ACCESOS (todo bajo el email arrelsdelfoc@gmail.com — cuenta dedicada al
+   negocio, NO la personal de la clienta)
+--------------------------------------------------------------------------------------
+- GitHub: cuenta "Arrelsdelfoc", repo https://github.com/Arrelsdelfoc/Arrelsdelfoc
+  (privado, rama main). Si en esta máquina pide credenciales de otra cuenta de GitHub,
+  ya está configurado credential.useHttpPath=true globalmente para que este repo use
+  su propia credencial sin pisar otras cuentas de GitHub de la clienta.
+- Netlify: proyecto "Arrels Del Foc" (nombre interno del sitio: timely-daifuku-f86d30),
+  mismo owner arrelsdelfoc@gmail.com. Conectado al repo de GitHub de arriba con
+  Continuous Deployment (build command vacío, publish directory "/").
+  URL de respaldo siempre activa: https://timely-daifuku-f86d30.netlify.app
+- Dominio: arrelsdelfoc.com (comprado y ya conectado, 18/08/2026). DNS gestionado por
+  Netlify DNS (nameservers dns1-4.p06.nsone.net). www.arrelsdelfoc.com redirige al
+  dominio raíz. Certificado SSL (Let's Encrypt) activo y renovación automática.
+- Google Search Console: verificado con éxito (18/08/2026) vía registro TXT en el DNS
+  de Netlify (google-site-verification=...). Sitemap enviado (sitemap.xml, 4 páginas).
+- Google Business Profile / Google Maps: ya existe y ya apunta correctamente a
+  arrelsdelfoc.com. Rating 5.0, +200 reseñas. No se tocó desde el código, se administra
+  desde la cuenta de Google del negocio (no tengo acceso ahí).
+- Instagram: instagram.com/arrelsdelfoc — Tripadvisor listado también.
+
+
+4) QUÉ YA ESTÁ HECHO (estado real a 20/08/2026)
+---------------------------------------------------
+- Web completa, mobile-first, en vivo en el dominio propio con SSL.
+- Narrativa de marca: "raíces argentinas propias + producto de proximidad del Pirineo,
+  con el fuego como protagonista" — YA NO es "fusión argentina-catalana" (se sacó esa
+  narrativa a pedido de la clienta/dueño; si se retoca texto en el futuro, mantener esta
+  línea, no volver a mencionar "fusión catalana").
+- Carta completa con fotos reales en casi todos los platos, precios, 4 idiomas.
+- Horario real día a día (no genérico), corregido y verificado.
+- Footer, header, redes sociales, iconos — todo revisado y funcionando en los 4 idiomas.
+- SEO técnico completo: robots.txt, sitemap.xml, canonical tags, Open Graph/Twitter
+  Card, datos estructurados JSON-LD tipo Restaurant (dirección, teléfono, horario,
+  geo, redes, rating 5/5), un único <h1> por página, alt text descriptivo en todas
+  las imágenes, titles/meta descriptions con keywords de Cerdanya/Andorra/Pirineos.
+  Hreflang NO implementado (no tiene sentido sin URLs separadas por idioma — sería
+  un cambio de arquitectura más grande, pendiente de decidir si se quiere a futuro).
+- Rendimiento: vídeo del hero comprimido de ~20MB a ~3-4MB (ffmpeg instalado en esta
+  máquina si hace falta comprimir algo más — winget install --id Gyan.FFmpeg).
+
+
+5) PENDIENTE / PRÓXIMOS PASOS
+---------------------------------
+- QR para las mesas: AHORA SÍ se puede generar (antes no, porque no había dominio
+  definitivo) — debe apuntar a https://arrelsdelfoc.com/carta.html.
+- Blog/novedades: se propusieron 8 ideas de artículos con keyword objetivo (guía de
+  asados cerca de Andorra, historia del restaurante, maridajes, etc.) pero la web NO
+  tiene sección de blog todavía. Pendiente decidir si se construye y qué artículos
+  escribir primero.
+- 2 fotos de plato sin confirmar del todo: una de filete con puré e higos, otra de
+  pescado con patatas y salsa blanca — no está claro a qué plato de la carta
+  corresponden exactamente.
+- Sugerido (acción externa de la clienta, no de código): dar de alta el negocio en
+  TheFork/ElTenedor y en directorios turísticos de Andorra.
+- Seguir revisando en Search Console (sección "Páginas") que las 4 páginas queden
+  indexadas — puede tardar días.
+
+
+6) NOTAS ÚTILES PARA QUIEN RETOME ESTO
+-------------------------------------------
+- La clienta manda fotos por WhatsApp Web muy rápido — si un archivo no aparece
+  materializado en Descargas, pedir que lo reenvíe como adjunto/documento (pegado en
+  el chat directo no siempre queda como archivo real).
+- Antes de publicar cualquier cambio, probarlo en local y revisar los 4 idiomas.
+- Todo el contenido de texto (traducciones, carta, horario) vive en script.js, objeto
+  I18N (traducciones) y CARTA/HORARI (datos). El HTML de cada página solo tiene el
+  texto en catalán como resguardo visual antes de que cargue el JS.
