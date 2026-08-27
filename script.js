@@ -636,9 +636,15 @@ function initLangSwitch() {
   wrap.querySelectorAll("button").forEach((btn) => {
     btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
   });
+  // CA (/) and ES (/es/) now live at their own URLs with server-rendered
+  // content in that language, so on load we must respect the page's own
+  // lang, not silently swap it for whatever was last picked with JS. The
+  // old localStorage-remembered language is only honoured for FR/EN, which
+  // don't have dedicated URLs yet and still rely on the in-place JS switch.
+  const pageLang = document.documentElement.lang || "ca";
   let saved = "ca";
   try { saved = localStorage.getItem("arrels-lang") || "ca"; } catch (e) {}
-  applyLanguage(saved);
+  applyLanguage(saved === "fr" || saved === "en" ? saved : pageLang);
 }
 
 /* ---- La Carta: entrants/principals/postres (fotos+preu) + begudes/vins (llistes) com a pestanyes ---- */
